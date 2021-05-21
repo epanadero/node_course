@@ -93,19 +93,58 @@ greet() {
     }
 */
 
-person.greet();
+// person.greet();
 
-// Javascript módulo 16
+// // Javascript módulo 16
 
 const hobbies = ['Sports', 'Cooking'];
-//for (let hobby of hobbies) {
-//    console.log(hobby);
-//}
+// //for (let hobby of hobbies) {
+// //    console.log(hobby);
+// //}
 
-console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
-console.log(hobbies);
+// // console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+// // console.log(hobbies);
 
-//es mejor utilizar el método map en lugar del for para extraer datos de un array
+// //es mejor utilizar el método map en lugar del for para extraer datos de un array
 
-// Javascript módulo 17
+// // Javascript módulo 17
 
+// // Punteros sobre objetos
+
+// hobbies.push('Programming');
+// console.log(hobbies);
+
+// // Javascript módulo 18
+
+// //copiar el contenido de un array en otro array xon loa 3 puntos (spread operator)
+// const copiedArray = [...hobbies];
+// console.log(copiedArray);
+
+// const copiedPerson = {...person};
+// console.log(copiedPerson);
+
+// // rest operator is the opposite to spread operator, pull elements or properties and merge arguments into an array
+// const toArray = (...args) => {
+//     return args;
+// }
+
+// console.log(toArray(1,2,3,4));
+
+// Javascript módulo 19
+// Structuring
+
+// const printName = (personData) => {
+//     console.log(personData.name);
+// }
+
+const printName = ({ name }) => {
+    console.log(name);
+}
+
+printName(person);
+
+const { name1, age1 } = person;
+console.log(name1, age1);
+
+const [hobby1, hobby2] = hobbies;
+console.log(hobby1, hobby2);
